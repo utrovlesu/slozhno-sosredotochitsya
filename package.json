@@ -1,0 +1,26 @@
+{
+  "name": "work2-posmotri_v_okno",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Привет!\" ",
+    "check": "prettier --check './**/*.{html,css,js}'",
+    "format": "prettier --write './**/*.{html,css,js}'",
+    "lint": "stylelint **/*.css",
+    "lintfix": "stylelint **/*.css --fix",
+    "checkAll": "npm run check && npm run lint",
+    "fixAll": "npm run format && npm run lintfix",
+    "atomize": "atomizer -o ./dist/output.css --watch index.html"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "atomizer": "^3.29.0",
+    "prettier": "^2.8.0",
+    "stylelint": "^14.15.0"
+  },
+  "description": "",
+  "devDependencies": {
+    "tailwindcss": "^3.4.4"
+  }
+}
