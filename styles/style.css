@@ -5,6 +5,10 @@
   font-family: IBM Plex Mono;
   padding: 10px;
   font-size: 18px;
+  background-attachment: fixed;
+  background-image:var(--background);
+  background-size: cover;
+  background-position: center center;
 }
 
 /* Header */
@@ -14,7 +18,7 @@
   display: grid;
   grid-template-rows: repeat(3, auto);
   padding-block-end: 56px;
-  background: url("../images/cover-image-dark.png");
+
 }
 
 .decorated-zone::after {

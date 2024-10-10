@@ -4,11 +4,12 @@
   переключая тему
 */
 
-:root.theme-light {
+:root .theme_light {
   --accent-color: #FF8DCB; 
   --heading-color: #FFC2E6;
   --text-color: #353430;
   --main-color: #FFF1F7;
+  --background:url("../images/cover-image-light.png")
 }
 
 .page.theme_light {
@@ -16,12 +17,22 @@
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
- 
-  background-color: var(--main-color);
-}
+  background-image: var(--background);
+  } 
 
 .page.theme_light .rec {
   display: none;
+}
+
+
+
+.header {
+ 
+}
+
+.h1 {
+  color: var(--heading-color);  
+  text-shadow: 4px 4px 0 var(--accent-color); 
 }
 
 @media (prefers-color-scheme: light) {
@@ -31,15 +42,6 @@
         --heading-color: #FFC2E6;
         --text-color: #353430;
         --main-color: #FFF1F7; 
+        --background:url("../images/cover-image-light.png")
     }
 }
-
-.header {
-  background: var(--main-color);
-}
-
-.h1 {
-  color: var(--heading-color);  
-  text-shadow: 4px 4px 0 var(--accent-color); 
-}
-
