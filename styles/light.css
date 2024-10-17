@@ -6,9 +6,16 @@
 
 :root .theme_light {
   --accent-color: #FF8DCB; 
-  --heading-color: #FFC2E6;
+  --h1-color: #FFC2E6;
+  --h2-color:#353430;
+  --heading-color:#353430;
   --text-color: #353430;
   --main-color: #FFF1F7;
+  --menu-link: #353430;
+  --menu-link-activ: #353430;
+  --menu-link-hover:rgba(50, 49, 45, 0.4);
+  --menu-link-focus: #353430;
+  --link-hover: #353430;
   --background:url("../images/cover-image-light.png")
 }
 
@@ -18,30 +25,66 @@
     чем стили в медиазапросе предпочтений пользователя
   */
   background-image: var(--background);
+  color: var(--text-color);
   } 
 
 .page.theme_light .rec {
   display: none;
 }
 
+/*
+.decorated-zone::after {
+     border-right: 1px solid var(--menu-link);
+  border-top: 1px solid var(--menu-link);
+ }
 
-
-.header {
- 
-}
+.decorated-zone::before {
+  border-bottom: 1px solid var(--menu-link);
+  border-left: 1px solid var(--menu-link);
+  }
 
 .h1 {
   color: var(--heading-color);  
   text-shadow: 4px 4px 0 var(--accent-color); 
 }
 
+.header__theme-menu-button_active {
+  outline: 1px solid var(--menu-link);
+}
+
+.header__theme-menu-button {
+  color: var(--menu-link);
+}
+
+.header__theme-menu-button:hover {
+  outline: 1px solid var(--menu-link-hover);
+}
+
+.header__theme-menu-button:focus {
+ border-bottom: 1px solid var(--menu-link-focus);
+}
+
+.link:hover {
+  border-bottom: 2px solid var(--link-hover);
+}
+*/
 @media (prefers-color-scheme: light) {
   :root {
         /* Дублируем переменные светлой темы */   
         --accent-color: #FF8DCB; 
-        --heading-color: #FFC2E6;
+        --h1-color: #FFC2E6;
+        --heading-color:#353430;
         --text-color: #353430;
-        --main-color: #FFF1F7; 
+        --main-color: #FFF1F7;
+        --menu-link: #353430;
+        --menu-link-activ: #353430;
+        --menu-link-hover:rgba(50, 49, 45, 0.4);
+        --menu-link-focus: #353430;
+        --link-hover: #353430;
         --background:url("../images/cover-image-light.png")
+    }
+
+    .rec {
+      display: none;
     }
 }

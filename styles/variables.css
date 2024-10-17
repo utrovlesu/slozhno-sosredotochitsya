@@ -5,7 +5,14 @@
 :root {
   --main-color: #000028;
   --accent-color: #FF0070; 
-  --heading-color: #DB00FF;
+  --h1-color: #DB00FF;
+  --h2-color:#FF0070;
+  --heading-color:#000028;
   --text-color: #F1B2CE;
+  --menu-link: #FF0070;
+  --menu-link-activ:#FF0070;
+  --menu-link-hover:rgba(255, 0, 112, 0.4);
+  --menu-link-focus: #FF0070;
+  --link-hover: #F1B2CE;
   --background:url("../images/cover-image-dark.png")
 }
