@@ -32,42 +32,7 @@
   display: none;
 }
 
-/*
-.decorated-zone::after {
-     border-right: 1px solid var(--menu-link);
-  border-top: 1px solid var(--menu-link);
- }
 
-.decorated-zone::before {
-  border-bottom: 1px solid var(--menu-link);
-  border-left: 1px solid var(--menu-link);
-  }
-
-.h1 {
-  color: var(--heading-color);  
-  text-shadow: 4px 4px 0 var(--accent-color); 
-}
-
-.header__theme-menu-button_active {
-  outline: 1px solid var(--menu-link);
-}
-
-.header__theme-menu-button {
-  color: var(--menu-link);
-}
-
-.header__theme-menu-button:hover {
-  outline: 1px solid var(--menu-link-hover);
-}
-
-.header__theme-menu-button:focus {
- border-bottom: 1px solid var(--menu-link-focus);
-}
-
-.link:hover {
-  border-bottom: 2px solid var(--link-hover);
-}
-*/
 @media (prefers-color-scheme: light) {
   :root {
         /* Дублируем переменные светлой темы */   
