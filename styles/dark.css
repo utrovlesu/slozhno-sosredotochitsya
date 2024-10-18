@@ -5,20 +5,18 @@
 */
 :root .theme_dark {
   --main-color: #000028;
-  --accent-color: #FF0070; 
-  --h1-color: #DB00FF;
-  --h2-color:#FF0070;
-  --heading-color:#000028;
-  --text-color: #F1B2CE;
-  --menu-link: #FF0070;
-  --menu-link-activ:#FF0070;
-  --menu-link-hover:rgba(255, 0, 112, 0.4);
-  --menu-link-focus: #FF0070;
-  --link-hover: #F1B2CE;
-  --background:url("../images/cover-image-dark.png")
+  --accent-color: #ff0070;
+  --h1-color: #db00ff;
+  --h2-color: #ff0070;
+  --heading-color: #000028;
+  --text-color: #f1b2ce;
+  --menu-link: #ff0070;
+  --menu-link-activ: #ff0070;
+  --menu-link-hover: rgba(255, 0, 112, 0.4);
+  --menu-link-focus: #ff0070;
+  --link-hover: #f1b2ce;
+  --background: url('../images/cover-image-dark.png');
 }
-
-
 
 .page.theme_dark {
   /* сохраните этот селектор в приведённом виде.
@@ -31,5 +29,3 @@
 .theme_dark .rec {
   display: block;
 }
-
-

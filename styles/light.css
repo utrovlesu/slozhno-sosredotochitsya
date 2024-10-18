@@ -5,18 +5,18 @@
 */
 
 :root .theme_light {
-  --accent-color: #FF8DCB; 
-  --h1-color: #FFC2E6;
-  --h2-color:#353430;
-  --heading-color:#353430;
+  --accent-color: #ff8dcb;
+  --h1-color: #ffc2e6;
+  --h2-color: #353430;
+  --heading-color: #353430;
   --text-color: #353430;
-  --main-color: #FFF1F7;
+  --main-color: #fff1f7;
   --menu-link: #353430;
   --menu-link-activ: #353430;
-  --menu-link-hover:rgba(50, 49, 45, 0.4);
+  --menu-link-hover: rgba(50, 49, 45, 0.4);
   --menu-link-focus: #353430;
   --link-hover: #353430;
-  --background:url("../images/cover-image-light.png")
+  --background: url('../images/cover-image-light.png');
 }
 
 .page.theme_light {
@@ -26,30 +26,29 @@
   */
   background-image: var(--background);
   color: var(--text-color);
-  } 
+}
 
 .page.theme_light .rec {
   display: none;
 }
 
-
 @media (prefers-color-scheme: light) {
   :root {
-        /* Дублируем переменные светлой темы */   
-        --accent-color: #FF8DCB; 
-        --h1-color: #FFC2E6;
-        --heading-color:#353430;
-        --text-color: #353430;
-        --main-color: #FFF1F7;
-        --menu-link: #353430;
-        --menu-link-activ: #353430;
-        --menu-link-hover:rgba(50, 49, 45, 0.4);
-        --menu-link-focus: #353430;
-        --link-hover: #353430;
-        --background:url("../images/cover-image-light.png")
-    }
+    /* Дублируем переменные светлой темы */
+    --accent-color: #ff8dcb;
+    --h1-color: #ffc2e6;
+    --heading-color: #353430;
+    --text-color: #353430;
+    --main-color: #fff1f7;
+    --menu-link: #353430;
+    --menu-link-activ: #353430;
+    --menu-link-hover: rgba(50, 49, 45, 0.4);
+    --menu-link-focus: #353430;
+    --link-hover: #353430;
+    --background: url('../images/cover-image-light.png');
+  }
 
-    .rec {
-      display: none;
-    }
+  .rec {
+    display: none;
+  }
 }
