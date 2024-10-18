@@ -191,10 +191,6 @@ h3.title-decor {
   outline: 1px solid var(--text-color);
 }
 
-.link:focus {
-  outline: initial;
-}
-
 /* End of Content */
 
 /* Gallery */
