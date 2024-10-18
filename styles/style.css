@@ -3,7 +3,6 @@
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
   font-family: IBM Plex Mono;
-  padding: 10px;
   font-size: 18px;
   color: var(--text-color);
   background-attachment: fixed;
@@ -18,16 +17,18 @@
 
 .header {
   display: grid;
-  grid-template-rows: repeat(3, auto);
-  padding-block-end: 56px;
+  grid-template-rows: 1fr min-content 1fr;
+  padding: 10px ;
+  min-block-size: 648px;
+  block-size: 100vh;
  }
 
 .rec {
   color: var(--accent-color);
   text-transform: uppercase;
   position: absolute;
-  right: 10px;
-  top: 2px;
+  right: 20px;
+  top: 11px;
   padding-right: 19px;
 }
 
@@ -54,8 +55,8 @@
   height: 25px;
   border-right: 1px solid var(--menu-link);
   border-top: 1px solid var(--menu-link);
-  top: 0;
-  right: 0;
+  top: 10px;
+  right: 10px;
 }
 
 .decorated-zone::before {
@@ -65,8 +66,8 @@
   height: 25px;
   border-bottom: 1px solid var(--menu-link);
   border-left: 1px solid var(--menu-link);
-  bottom: 0;
-  left: 0;
+  bottom: 10px;
+  left: 10px;
 }
 
 .header__theme-menu {
@@ -112,13 +113,18 @@
 
 /* Content */
 
+.main {
+  padding: 40px 10px 0 10px;
+}
+
 .h1 {
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   color: var(--h1-color);
   line-height: 82.5%;
   font-weight: 700;
   text-shadow: 4px 4px 0 var(--accent-color);
-  padding: 68px 0 57px;
+  align-self: center;
+  justify-self: flex-start;
 }
 
 .h2 {
@@ -159,6 +165,7 @@ h3.title-decor {
 
 .sub-title {
   height: fit-content;
+  align-self: center;
 }
 
 .text {
@@ -166,7 +173,7 @@ h3.title-decor {
 }
 
 .section {
-  padding-block-start: 50px;
+  padding-block-end: 50px;
 }
 
 .link {
@@ -203,13 +210,8 @@ h3.spec-title {
 /* End of Content */
 
 /* Gallery */
-
 .gallery-section {
-  padding: 50px 0 50px;
-}
-
-.gal-item {
-  max-width: 100%;
+  padding-block-end: 40px;
 }
 
 .gallery {
@@ -217,37 +219,67 @@ h3.spec-title {
   gap: 10px;
 }
 
+.gal-item {
+  max-width: 100%;
+}
+
 /* End of Gallery */
 
 /* Footer */
 
+.footer{
+  display: grid;
+  padding: 10px ;
+  min-block-size: 648px;
+  block-size: 100vh;
+}
+
 .footer-heading {
-  padding: 277px 0 271px 4px;
   text-shadow: 2px 2px 0 var(--accent-color);
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   color: var(--h1-color);
   line-height: 86.5%;
   font-weight: 700;
+  align-self: center;
+  justify-self: center;
 }
 
 /*End of footer */
 
 /* Media */
 @media (width >= 768px) {
-  .page {
-    padding: 20px;
+
+  .main {
+    padding: 60px 20px 0 20px;
   }
 
-  .header {
-    padding-block-end: 163px;
+    .header, .footer {
+    min-block-size: 1024px;
+  block-size: 100vh;
+  padding: 20px;
   }
+
+  .decorated-zone::before {
+    bottom: 20px;
+    left: 20px;
+  }
+
+  .decorated-zone::after {
+    top: 20px;
+    right: 20px;
+  }
+
+.rec {
+  right: 30px;
+  top: 23px;
+}
 
   .header__theme-menu {
     padding-block-start: 171px;
   }
 
   .h1 {
-    padding: 177px 0 161px;
+    
     transform: translateX(-20px);
   }
 
@@ -272,7 +304,7 @@ h3.spec-title {
   }
 
   .section {
-    padding-block-start: 80px;
+    padding-block-end: 80px;
   }
 
   .h2-col {
@@ -280,8 +312,8 @@ h3.spec-title {
   }
 
   .gallery-section {
-    padding: 80px 0 80px;
-  }
+    padding-block-end: 60px;
+}
 
   .gallery {
     grid-template-columns: repeat(3, 1fr);
@@ -319,15 +351,12 @@ h3.spec-title {
     grid-row: 3 / 4;
   }
 
-  .footer-heading {
-    padding: 443px 0 438px;
-    text-align: center;
-  }
-}
+ }
 
 @media (width >= 1024px) {
-  .header {
-    padding-block-end: 115px;
+  .header, .footer {
+  min-block-size: 768px;
+  block-size: 100vh;
   }
 
   .header__theme-menu {
@@ -347,15 +376,8 @@ h3.spec-title {
   .footer-heading {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
-  .h1 {
-    padding: 264px 0 114px;
-  }
-
-  .footer-heading {
-    padding: 297px 0 296px;
-  }
-
-  .column-content {
+ 
+   .column-content {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
