@@ -141,11 +141,7 @@
 .list-item-heading {
   font-size: 18px;
 }
-/*
-h3.title-decor {
-  margin-block-end: 10px;
-}
-*/
+
 .list-item-heading,
 .title-decor {
   color: var(--heading-color);
@@ -176,6 +172,11 @@ h3.title-decor {
 .list {
   display: grid;
   gap: 20px;
+}
+
+.list__item {
+  display: grid;
+  gap: 10px;
 }
 
 .link {
